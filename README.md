@@ -21,15 +21,6 @@ No creo en sobrecomplicar las soluciones. Mi objetivo al escribir código para v
 2. **Modularidad:** Separar los sistemas (UI, físicas, lógicas del jugador) para que los componentes sean reutilizables en otros prototipos pequeños.
 3. **Optimización:** Uso correcto de físicas, triggers y recolección de basura para garantizar un rendimiento estable.
 
----
-
-## 📬 Contacto & Redes
-
-Si quieres conocer más sobre mi trabajo, discutir sobre código o hablar sobre oportunidades de desarrollo:
-
-- **LinkedIn:** [Tu Nombre de Perfil](https://linkedin.com/in/tu-usuario)
-- **GitHub:** [@tu-usuario](https://github.com/tu-usuario)
-- **Correo:** [Tu Correo Electrónico]
 
 ---
-*“Construyendo sistemas estables y experiencias interactivas, una línea de código a la vez.”*
+*“Construyendo sistemas estables y experiencias interactivas, una línea de código a la vez.”* 
