@@ -14,20 +14,6 @@ Mi enfoque en el desarrollo de videojuegos se centra en proyectos de alcance con
 
 ---
 
-## 🚀 Proyectos Destacados
-
-### 🛸 Neural Siege: Dragon Protocol
-*Desarrollado bajo el sello independiente **Eragon Studios***
-
-Un proyecto conceptual y estratégico diseñado para poner a prueba mecánicas de juego integradas, gestión de estados y control de flujos de juego en Unity.
-- **Alcance:** Proyecto mediano/corto enfocado en mecánicas pulidas y bucles de juego fluidos.
-- **Tecnologías y Características:**
-  - Arquitectura modular basada en eventos.
-  - Implementación de sistemas de juego iterativos en Unity.
-  - Gestión optimizada de recursos en escena.
-
----
-
 ## 📌 Filosofía de Desarrollo
 
 No creo en sobrecomplicar las soluciones. Mi objetivo al escribir código para videojuegos es:
