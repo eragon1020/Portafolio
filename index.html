@@ -21,10 +21,10 @@
 
     <nav class="nav" id="nav">
       <a href="#inicio" class="nav__link" data-i18n="nav_home">Inicio</a>
-      <a href="#acerca" class="nav__link" data-i18n="nav_about">Acerca</a>
+      <a href="#proyectos" class="nav__link" data-i18n="nav_projects">Proyectos</a>
       <a href="#cv" class="nav__link" data-i18n="nav_cv">Trayectoria</a>
       <a href="#habilidades" class="nav__link" data-i18n="nav_skills">Habilidades</a>
-      <a href="#proyectos" class="nav__link" data-i18n="nav_projects">Proyectos</a>
+      <a href="#acerca" class="nav__link" data-i18n="nav_about">Acerca</a>
       <a href="#contacto" class="nav__link" data-i18n="nav_contact">Contacto</a>
     </nav>
 
@@ -70,7 +70,7 @@
 
       <div class="hero__actions">
         <a href="#proyectos" class="btn btn--primary" data-magnetic data-i18n="btn_view_projects">Ver proyectos</a>
-        <a href="assets/docs/Hoja de vida gn (1).pdf" class="btn btn--ghost" data-magnetic download data-i18n="btn_download_cv">Descargar CV</a>
+        <a href="assets/docs/CV-Bryam-Aragon-Zabala.pdf" class="btn btn--ghost" data-magnetic download data-i18n="btn_download_cv">Descargar CV</a>
         <button type="button" class="btn btn--ghost btn--sound" id="soundToggle" data-magnetic aria-pressed="false">
           <span class="sound-icon" aria-hidden="true">♪</span>
           <span data-i18n="btn_sound_on">Música</span>
@@ -87,50 +87,174 @@
     </div>
   </section>
 
-  <!-- ============ ACERCA DE MÍ ============ -->
-  <section id="acerca" class="panel reveal">
+<!-- ============ PROYECTOS ============ -->
+  <section id="proyectos" class="panel panel--alt reveal">
     <div class="container panel__grid">
       <div class="panel__label">
         <p class="ticket-tag mono">REQ-001</p>
-        <h2 class="panel__title" data-i18n="about_title">Acerca de mí</h2>
+        <h2 class="panel__title" data-i18n="projects_title">Proyectos</h2>
+        <p class="panel__hint" data-i18n="projects_hint">
+          Una mezcla de backend y desarrollo de videojuegos. Los proyectos de Unity son
+          <strong>prototipos actualmente en desarrollo</strong>, parte de mi bootcamp en Generation,
+          jugables en itch.io.
+        </p>
       </div>
 
       <div class="panel__body">
-        <div class="avatar-frame" aria-hidden="true">
-          <!-- Reemplaza esta caja por tu foto: <img src="assets/img/foto.jpg" alt="Bryam Aragón"> -->
-          <span class="avatar-placeholder mono">foto.jpg</span>
+        <div class="project-filter" role="group" aria-label="Filtrar proyectos">
+          <button type="button" class="filter-btn is-active" data-filter="all" data-i18n="filter_all">Todos</button>
+          <button type="button" class="filter-btn" data-filter="web" data-i18n="filter_web">Backend / Web</button>
+          <button type="button" class="filter-btn" data-filter="unity" data-i18n="filter_unity">Unity</button>
         </div>
 
-        <div class="panel__text">
-          <p class="reveal-child" data-i18n="about_p1">
-            Empecé del lado del "algo no funciona": como técnico en mantenimiento de equipos de cómputo
-            y luego en mesas de ayuda, viendo de cerca qué se rompe y por qué. Esa experiencia —tickets,
-            SLA, migraciones de datos, soporte a usuarios reales— me enseñó a diagnosticar antes de actuar,
-            una costumbre que llevo directo al código.
-          </p>
-          <p class="reveal-child" data-i18n="about_p2">
-            Hoy curso Ingeniería de Software en UNINPAHU y estoy construyendo mi camino como desarrollador:
-            bases de datos relacionales y no relacionales, APIs REST bajo MVC, y proyectos como una
-            arquitectura de conexión IoT con MongoDB. Trabajo con metodologías ágiles (SCRUM) y me interesa
-            especialmente el desarrollo backend y de aplicaciones móviles.
-          </p>
-          <p class="reveal-child" data-i18n="about_p4">
-            En paralelo estoy en el <strong>bootcamp de Generation</strong>, donde descubrí el desarrollo de
-            videojuegos con <strong>Unity y C#</strong>. Me engancha la parte de diseñar una mecánica, verla
-            fallar, y ajustarla hasta que "se siente bien" jugarla — es el mismo instinto de diagnóstico que
-            traigo del soporte técnico, aplicado a resolver problemas de jugabilidad en vez de tickets.
-          </p>
-          <p class="reveal-child" data-i18n="about_p3">
-            Busco mi primera posición como <strong>Desarrollador Junior</strong> en un equipo donde pueda
-            seguir resolviendo problemas complejos, esta vez desde el código, no solo desde el ticket.
-          </p>
+        <div class="project-grid">
+
+          <article class="project-card reveal-child" data-tilt data-category="web">
+            <div class="project-card__media" aria-hidden="true">
+              <span class="mono" data-i18n="proj1_media_label">captura / gif del proyecto</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__head">
+                <h3 data-i18n="proj1_title">Arquitectura de Conexión IoT con Backend MVC</h3>
+                <span class="badge badge--live" data-i18n="proj1_badge">en producción</span>
+              </div>
+              <p data-i18n="proj1_desc">
+                Backend estructurado bajo arquitectura Modelo-Vista-Controlador para gestionar datos de
+                sensores IoT en tiempo real. Diseño y despliegue de múltiples endpoints REST para la
+                transmisión y almacenamiento óptimo de información en una base de datos no relacional.
+              </p>
+              <p class="project-card__challenge">
+                <strong data-i18n="proj1_challenge_label">Reto resuelto:</strong> <span data-i18n="proj1_challenge_text">centralizar y estandarizar la ingesta de datos de múltiples
+                sensores sin perder consistencia ni tiempos de respuesta.</span>
+              </p>
+              <div class="tag-cloud tag-cloud--sm">
+                <span class="tag">Node.js</span>
+                <span class="tag">API REST</span>
+                <span class="tag">MVC</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">IoT</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/eragon1020/zodiaco-api" target="_blank" rel="noopener" data-i18n="proj1_link">Ver repositorio →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-child" data-tilt data-category="unity">
+            <div class="project-card__media">
+              <img src="https://img.itch.zone/aW1nLzI4MjcyMDQ2LnBuZw==/original/jhwCUL.png" alt="Captura de Feed the Animals" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__head">
+                <h3 data-i18n="proj2_title">Feed the Animals</h3>
+                <span class="badge badge--bootcamp" data-i18n="proj2_badge">prototipo · jugable</span>
+              </div>
+              <p data-i18n="proj2_desc">
+                Prototipo 3D de Unity (Challenge del bootcamp de Generation) donde el objetivo es alimentar
+                animales que aparecen en carriles laterales con rotaciones automáticas. Movimiento del
+                personaje en ejes vertical y horizontal, sistema de vidas y puntuación gestionado por un
+                <code>GameManager</code> central, y barras de vida/energía con Sliders de UI en espacio de mundo.
+              </p>
+              <p class="project-card__challenge">
+                <strong data-i18n="proj2_challenge_label">Reto resuelto:</strong>
+                <span data-i18n="proj2_challenge_text">sincronizar spawns dinámicos con rotaciones aleatorias sin que el objeto de juego
+                pierda consistencia visual ni de colisiones.</span>
+              </p>
+              <div class="tag-cloud tag-cloud--sm">
+                <span class="tag">Unity 6 LTS</span>
+                <span class="tag">C#</span>
+                <span class="tag">Object Spawning</span>
+                <span class="tag">UI Sliders</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://eragon1020.itch.io/saltaesquiva" target="_blank" rel="noopener" data-i18n="proj2_link">Jugar en itch.io →</a>
+                <a href="https://github.com/eragon1020/Feed-The-Animals" target="_blank" rel="noopener" data-i18n="proj_repo_link">Ver repositorio →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-child" data-tilt data-category="unity">
+            <div class="project-card__media">
+              <img src="https://img.itch.zone/aW1nLzI4MjcyMTI4LnBuZw==/original/eXql3B.png" alt="Captura de Jump&Dodge" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__head">
+                <h3 data-i18n="proj3_title">Jump&amp;Dodge</h3>
+                <span class="badge badge--bootcamp" data-i18n="proj3_badge">prototipo · jugable</span>
+              </div>
+              <p data-i18n="proj3_desc">
+                Prototipo de reflejos y control de salto: el jugador debe saltar y esquivar obstáculos
+                que aparecen de forma continua, aumentando la dificultad conforme avanza la partida.
+                Enfocado en pulir la sensación de salto (input responsivo, sin retardo perceptible).
+              </p>
+              <div class="tag-cloud tag-cloud--sm">
+                <span class="tag">Unity 6 LTS</span>
+                <span class="tag">C#</span>
+                <span class="tag">Physics2D/3D</span>
+                <span class="tag">Game Feel</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://eragon1020.itch.io/jump" target="_blank" rel="noopener" data-i18n="proj3_link">Jugar en itch.io →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-child" data-tilt data-category="unity">
+            <div class="project-card__media">
+              <img src="https://img.itch.zone/aW1nLzI4MjcyMTcwLnBuZw==/original/EPX4b7.png" alt="Captura de Transición de colores" loading="lazy">
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__head">
+                <h3 data-i18n="proj4_title">Transición de Colores</h3>
+                <span class="badge badge--bootcamp" data-i18n="proj4_badge">prototipo · jugable</span>
+              </div>
+              <p data-i18n="proj4_desc">
+                Reto de lógica y percepción centrado en el manejo de estados y transiciones de color en
+                tiempo real dentro de Unity, practicando control de eventos y feedback visual inmediato
+                para el jugador.
+              </p>
+              <div class="tag-cloud tag-cloud--sm">
+                <span class="tag">Unity 6 LTS</span>
+                <span class="tag">C#</span>
+                <span class="tag">State Management</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://eragon1020.itch.io/transiciondecolores" target="_blank" rel="noopener" data-i18n="proj4_link">Jugar en itch.io →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-child" data-tilt data-category="unity">
+            <div class="project-card__media" aria-hidden="true">
+              <span class="mono" data-i18n="proj5_media_label">sin captura aún · disponible en itch.io</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__head">
+                <h3 data-i18n="proj5_title">Guerra de Balones</h3>
+                <span class="badge badge--bootcamp" data-i18n="proj5_badge">prototipo · jugable</span>
+              </div>
+              <p data-i18n="proj5_desc">
+                Minijuego de acción por turnos/tiempo real construido en Unity como parte de los desafíos
+                del bootcamp, enfocado en mecánicas de lanzamiento y colisión entre objetos.
+              </p>
+              <div class="tag-cloud tag-cloud--sm">
+                <span class="tag">Unity 6 LTS</span>
+                <span class="tag">C#</span>
+                <span class="tag">Physics</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://eragon1020.itch.io/guerra-de-balones" target="_blank" rel="noopener" data-i18n="proj5_link">Jugar en itch.io →</a>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ CV / TRAYECTORIA ============ -->
-  <section id="cv" class="panel panel--alt reveal">
+<!-- ============ CV / TRAYECTORIA ============ -->
+  <section id="cv" class="panel reveal">
     <div class="container panel__grid">
       <div class="panel__label">
         <p class="ticket-tag mono">REQ-002</p>
@@ -147,8 +271,7 @@
             <div class="timeline__content">
               <h4 data-i18n="exp1_title">Soporte Técnico y en Sitio</h4>
               <p class="timeline__org">SISTEM LOG · Bogotá, Colombia</p>
-              <p data-i18n="exp1_desc">Gestión y resolución de incidencias por sistema de tickets, soporte a Microsoft 365
-                (SharePoint, Planner) y administración de plataformas de hosting y correo corporativo.</p>
+              <p data-i18n="exp1_desc">Resolución de incidencias por tickets y soporte a Microsoft 365 (SharePoint, Planner).</p>
             </div>
           </li>
           <li class="timeline__item reveal-child">
@@ -156,8 +279,7 @@
             <div class="timeline__content">
               <h4 data-i18n="exp2_title">Practicante de Soporte Nivel 1 · Mesa de Ayuda</h4>
               <p class="timeline__org">PEAR SOLUTIONS SAS · Bogotá, Colombia</p>
-              <p data-i18n="exp2_desc">Mantenimiento de bases de datos internas, soporte en sitio a hardware y software, y
-                administración de accesos sobre el dominio corporativo.</p>
+              <p data-i18n="exp2_desc">Mantenimiento de bases de datos internas y soporte en sitio a hardware y software.</p>
             </div>
           </li>
           <li class="timeline__item reveal-child">
@@ -165,8 +287,7 @@
             <div class="timeline__content">
               <h4 data-i18n="exp3_title">Auxiliar de Sistemas</h4>
               <p class="timeline__org">LIBRERÍA NACIONAL · Bogotá, Colombia</p>
-              <p data-i18n="exp3_desc">Migración de datos entre plataformas y mantenimiento de bases de datos operativas para
-                precios e inventario.</p>
+              <p data-i18n="exp3_desc">Migración de datos entre plataformas y mantenimiento de bases operativas.</p>
             </div>
           </li>
         </ol>
@@ -178,9 +299,7 @@
             <div class="timeline__content">
               <h4 data-i18n="edu0_title">Bootcamp de Desarrollo de Videojuegos (Unity)</h4>
               <p class="timeline__org">Generation Colombia</p>
-              <p data-i18n="edu0_desc">Formación intensiva en Unity Engine y C#: mecánicas de juego, gestión de
-                estado con patrones tipo GameManager, UI en tiempo real (UGUI) y control de versiones con Git.
-                Prototipos jugables publicados progresivamente en itch.io.</p>
+              <p data-i18n="edu0_desc">Unity y C#: mecánicas de juego, patrón GameManager, UI en tiempo real y Git.</p>
             </div>
           </li>
           <li class="timeline__item reveal-child">
@@ -188,13 +307,7 @@
             <div class="timeline__content">
               <h4 data-i18n="edu1_title">Ingeniería de Software · 8° semestre</h4>
               <p class="timeline__org">UNINPAHU · Bogotá, Colombia</p>
-            </div>
-          </li>
-          <li class="timeline__item reveal-child">
-            <div class="timeline__meta mono">2022 – 2025</div>
-            <div class="timeline__content">
-              <h4 data-i18n="edu2_title">Tecnología en Desarrollo de Software</h4>
-              <p class="timeline__org">UNINPAHU · Bogotá, Colombia</p>
+              <p data-i18n="edu1_desc">Continuación directa de la Tecnología en Desarrollo de Software (mismo programa).</p>
             </div>
           </li>
           <li class="timeline__item reveal-child">
@@ -216,8 +329,8 @@
     </div>
   </section>
 
-  <!-- ============ HABILIDADES ============ -->
-  <section id="habilidades" class="panel reveal">
+<!-- ============ HABILIDADES ============ -->
+  <section id="habilidades" class="panel panel--alt reveal">
     <div class="container panel__grid">
       <div class="panel__label">
         <p class="ticket-tag mono">REQ-003</p>
@@ -289,172 +402,48 @@
     </div>
   </section>
 
-  <!-- ============ PROYECTOS ============ -->
-  <section id="proyectos" class="panel panel--alt reveal">
+  <!-- ============ ACERCA DE MÍ ============ -->
+  <section id="acerca" class="panel reveal">
     <div class="container panel__grid">
       <div class="panel__label">
         <p class="ticket-tag mono">REQ-004</p>
-        <h2 class="panel__title" data-i18n="projects_title">Proyectos</h2>
-        <p class="panel__hint" data-i18n="projects_hint">
-          Una mezcla de backend y desarrollo de videojuegos: los prototipos de Unity están en desarrollo
-          activo como parte de mi bootcamp en Generation, publicados y jugables en itch.io.
-        </p>
+        <h2 class="panel__title" data-i18n="about_title">Acerca de mí</h2>
       </div>
 
       <div class="panel__body">
-        <div class="project-filter" role="group" aria-label="Filtrar proyectos">
-          <button type="button" class="filter-btn is-active" data-filter="all" data-i18n="filter_all">Todos</button>
-          <button type="button" class="filter-btn" data-filter="web" data-i18n="filter_web">Backend / Web</button>
-          <button type="button" class="filter-btn" data-filter="unity" data-i18n="filter_unity">Unity</button>
+        <div class="avatar-frame" aria-hidden="true">
+          <span class="avatar-placeholder mono">foto.jpg</span>
         </div>
 
-        <div class="project-grid">
-
-          <article class="project-card reveal-child" data-tilt data-category="web">
-            <div class="project-card__media" aria-hidden="true">
-              <span class="mono" data-i18n="proj1_media_label">captura / gif del proyecto</span>
-            </div>
-            <div class="project-card__body">
-              <div class="project-card__head">
-                <h3 data-i18n="proj1_title">Arquitectura de Conexión IoT con Backend MVC</h3>
-                <span class="badge badge--live" data-i18n="proj1_badge">en producción</span>
-              </div>
-              <p data-i18n="proj1_desc">
-                Backend estructurado bajo arquitectura Modelo-Vista-Controlador para gestionar datos de
-                sensores IoT en tiempo real. Diseño y despliegue de múltiples endpoints REST para la
-                transmisión y almacenamiento óptimo de información en una base de datos no relacional.
-              </p>
-              <p class="project-card__challenge">
-                <strong data-i18n="proj1_challenge_label">Reto resuelto:</strong> <span data-i18n="proj1_challenge_text">centralizar y estandarizar la ingesta de datos de múltiples
-                sensores sin perder consistencia ni tiempos de respuesta.</span>
-              </p>
-              <div class="tag-cloud tag-cloud--sm">
-                <span class="tag">Node.js</span>
-                <span class="tag">API REST</span>
-                <span class="tag">MVC</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">IoT</span>
-              </div>
-              <div class="project-card__links">
-                <a href="https://github.com/eragon1020/zodiaco-api" target="_blank" rel="noopener" data-i18n="proj1_link">Ver repositorio →</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal-child" data-tilt data-category="unity">
-            <div class="project-card__media">
-              <img src="https://img.itch.zone/aW1nLzI4MjcyMDQ2LnBuZw==/original/jhwCUL.png" alt="Captura de Feed the Animals" loading="lazy">
-            </div>
-            <div class="project-card__body">
-              <div class="project-card__head">
-                <h3 data-i18n="proj2_title">Feed the Animals</h3>
-                <span class="badge badge--bootcamp" data-i18n="proj2_badge">bootcamp · jugable</span>
-              </div>
-              <p data-i18n="proj2_desc">
-                Prototipo 3D de Unity (Challenge del bootcamp de Generation) donde el objetivo es alimentar
-                animales que aparecen en carriles laterales con rotaciones automáticas. Movimiento del
-                personaje en ejes vertical y horizontal, sistema de vidas y puntuación gestionado por un
-                <code>GameManager</code> central, y barras de vida/energía con Sliders de UI en espacio de mundo.
-              </p>
-              <p class="project-card__challenge">
-                <strong data-i18n="proj2_challenge_label">Reto resuelto:</strong>
-                <span data-i18n="proj2_challenge_text">sincronizar spawns dinámicos con rotaciones aleatorias sin que el objeto de juego
-                pierda consistencia visual ni de colisiones.</span>
-              </p>
-              <div class="tag-cloud tag-cloud--sm">
-                <span class="tag">Unity 6 LTS</span>
-                <span class="tag">C#</span>
-                <span class="tag">Object Spawning</span>
-                <span class="tag">UI Sliders</span>
-              </div>
-              <div class="project-card__links">
-                <a href="https://eragon1020.itch.io/saltaesquiva" target="_blank" rel="noopener" data-i18n="proj2_link">Jugar en itch.io →</a>
-                <a href="https://github.com/eragon1020/Feed-The-Animals" target="_blank" rel="noopener" data-i18n="proj_repo_link">Ver repositorio →</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal-child" data-tilt data-category="unity">
-            <div class="project-card__media">
-              <img src="https://img.itch.zone/aW1nLzI4MjcyMTI4LnBuZw==/original/eXql3B.png" alt="Captura de Jump&Dodge" loading="lazy">
-            </div>
-            <div class="project-card__body">
-              <div class="project-card__head">
-                <h3 data-i18n="proj3_title">Jump&amp;Dodge</h3>
-                <span class="badge badge--bootcamp" data-i18n="proj3_badge">bootcamp · jugable</span>
-              </div>
-              <p data-i18n="proj3_desc">
-                Prototipo de reflejos y control de salto: el jugador debe saltar y esquivar obstáculos
-                que aparecen de forma continua, aumentando la dificultad conforme avanza la partida.
-                Enfocado en pulir la sensación de salto (input responsivo, sin retardo perceptible).
-              </p>
-              <div class="tag-cloud tag-cloud--sm">
-                <span class="tag">Unity 6 LTS</span>
-                <span class="tag">C#</span>
-                <span class="tag">Physics2D/3D</span>
-                <span class="tag">Game Feel</span>
-              </div>
-              <div class="project-card__links">
-                <a href="https://eragon1020.itch.io/jump" target="_blank" rel="noopener" data-i18n="proj3_link">Jugar en itch.io →</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal-child" data-tilt data-category="unity">
-            <div class="project-card__media">
-              <img src="https://img.itch.zone/aW1nLzI4MjcyMTcwLnBuZw==/original/EPX4b7.png" alt="Captura de Transición de colores" loading="lazy">
-            </div>
-            <div class="project-card__body">
-              <div class="project-card__head">
-                <h3 data-i18n="proj4_title">Transición de Colores</h3>
-                <span class="badge badge--bootcamp" data-i18n="proj4_badge">bootcamp · jugable</span>
-              </div>
-              <p data-i18n="proj4_desc">
-                Reto de lógica y percepción centrado en el manejo de estados y transiciones de color en
-                tiempo real dentro de Unity, practicando control de eventos y feedback visual inmediato
-                para el jugador.
-              </p>
-              <div class="tag-cloud tag-cloud--sm">
-                <span class="tag">Unity 6 LTS</span>
-                <span class="tag">C#</span>
-                <span class="tag">State Management</span>
-              </div>
-              <div class="project-card__links">
-                <a href="https://eragon1020.itch.io/transiciondecolores" target="_blank" rel="noopener" data-i18n="proj4_link">Jugar en itch.io →</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal-child" data-tilt data-category="unity">
-            <div class="project-card__media" aria-hidden="true">
-              <span class="mono" data-i18n="proj5_media_label">sin captura aún · disponible en itch.io</span>
-            </div>
-            <div class="project-card__body">
-              <div class="project-card__head">
-                <h3 data-i18n="proj5_title">Guerra de Balones</h3>
-                <span class="badge badge--bootcamp" data-i18n="proj5_badge">bootcamp · jugable</span>
-              </div>
-              <p data-i18n="proj5_desc">
-                Minijuego de acción por turnos/tiempo real construido en Unity como parte de los desafíos
-                del bootcamp, enfocado en mecánicas de lanzamiento y colisión entre objetos.
-              </p>
-              <div class="tag-cloud tag-cloud--sm">
-                <span class="tag">Unity 6 LTS</span>
-                <span class="tag">C#</span>
-                <span class="tag">Physics</span>
-              </div>
-              <div class="project-card__links">
-                <a href="https://eragon1020.itch.io/guerra-de-balones" target="_blank" rel="noopener" data-i18n="proj5_link">Jugar en itch.io →</a>
-              </div>
-            </div>
-          </article>
-
+        <div class="panel__text">
+          <p class="reveal-child" data-i18n="about_p1">
+            Empecé del lado del "algo no funciona": como técnico en mantenimiento de equipos de cómputo
+            y luego en mesas de ayuda, viendo de cerca qué se rompe y por qué. Esa experiencia —tickets,
+            SLA, migraciones de datos, soporte a usuarios reales— me enseñó a diagnosticar antes de actuar,
+            una costumbre que llevo directo al código.
+          </p>
+          <p class="reveal-child" data-i18n="about_p2">
+            Hoy curso Ingeniería de Software en UNINPAHU y estoy construyendo mi camino como desarrollador:
+            bases de datos relacionales y no relacionales, APIs REST bajo MVC, y proyectos como una
+            arquitectura de conexión IoT con MongoDB. Trabajo con metodologías ágiles (SCRUM) y me interesa
+            especialmente el desarrollo backend y de aplicaciones móviles.
+          </p>
+          <p class="reveal-child" data-i18n="about_p4">
+            En paralelo estoy en el <strong>bootcamp de Generation</strong>, donde descubrí el desarrollo de
+            videojuegos con <strong>Unity y C#</strong>. Me engancha la parte de diseñar una mecánica, verla
+            fallar, y ajustarla hasta que "se siente bien" jugarla — es el mismo instinto de diagnóstico que
+            traigo del soporte técnico, aplicado a resolver problemas de jugabilidad en vez de tickets.
+          </p>
+          <p class="reveal-child" data-i18n="about_p3">
+            Busco mi primera posición como <strong>Desarrollador Junior</strong> en un equipo donde pueda
+            seguir resolviendo problemas complejos, esta vez desde el código, no solo desde el ticket.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ CONTACTO ============ -->
+<!-- ============ CONTACTO ============ -->
   <section id="contacto" class="panel contact reveal">
     <div class="container">
       <p class="ticket-tag mono">REQ-005</p>

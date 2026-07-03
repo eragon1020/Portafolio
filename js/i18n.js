@@ -33,17 +33,18 @@ const translations = {
 
     edu0_date: "2026 – actualidad",
     edu0_title: "Bootcamp de Desarrollo de Videojuegos (Unity)",
-    edu0_desc: "Formación intensiva en Unity Engine y C#: mecánicas de juego, gestión de estado con patrones tipo GameManager, UI en tiempo real (UGUI) y control de versiones con Git. Prototipos jugables publicados progresivamente en itch.io.",
+    edu0_desc: "Unity y C#: mecánicas de juego, patrón GameManager, UI en tiempo real y Git.",
+    edu1_desc: "Continuación directa de la Tecnología en Desarrollo de Software (mismo programa).",
 
     exp1_date: "Ene 2025 – Jul 2025",
     exp1_title: "Soporte Técnico y en Sitio",
-    exp1_desc: "Gestión y resolución de incidencias por sistema de tickets, soporte a Microsoft 365 (SharePoint, Planner) y administración de plataformas de hosting y correo corporativo.",
+    exp1_desc: "Resolución de incidencias por tickets y soporte a Microsoft 365 (SharePoint, Planner).",
     exp2_date: "Ago 2024 – Ene 2025",
     exp2_title: "Practicante de Soporte Nivel 1 · Mesa de Ayuda",
-    exp2_desc: "Mantenimiento de bases de datos internas, soporte en sitio a hardware y software, y administración de accesos sobre el dominio corporativo.",
+    exp2_desc: "Mantenimiento de bases de datos internas y soporte en sitio a hardware y software.",
     exp3_date: "Nov 2023 – Mar 2024",
     exp3_title: "Auxiliar de Sistemas",
-    exp3_desc: "Migración de datos entre plataformas y mantenimiento de bases de datos operativas para precios e inventario.",
+    exp3_desc: "Migración de datos entre plataformas y mantenimiento de bases operativas.",
 
     edu1_date: "2022 – actualidad",
     edu1_title: "Ingeniería de Software · 8° semestre",
@@ -75,7 +76,7 @@ const translations = {
     tag_lang_en: "Inglés · A2",
 
     projects_title: "Proyectos",
-    projects_hint: "Una mezcla de backend y desarrollo de videojuegos: los prototipos de Unity están en desarrollo activo como parte de mi bootcamp en Generation, publicados y jugables en itch.io.",
+    projects_hint: "Una mezcla de backend y desarrollo de videojuegos. Los proyectos de Unity son <strong>prototipos actualmente en desarrollo</strong>, parte de mi bootcamp en Generation, jugables en itch.io.",
     filter_all: "Todos",
     filter_web: "Backend / Web",
     filter_unity: "Unity",
@@ -89,7 +90,7 @@ const translations = {
     proj1_link: "Ver repositorio →",
 
     proj2_title: "Feed the Animals",
-    proj2_badge: "bootcamp · jugable",
+    proj2_badge: "prototipo · jugable",
     proj2_desc: "Prototipo 3D de Unity (Challenge del bootcamp de Generation) donde el objetivo es alimentar animales que aparecen en carriles laterales con rotaciones automáticas. Movimiento del personaje en ejes vertical y horizontal, sistema de vidas y puntuación gestionado por un <code>GameManager</code> central, y barras de vida/energía con Sliders de UI en espacio de mundo.",
     proj2_challenge_label: "Reto resuelto:",
     proj2_challenge_text: "sincronizar spawns dinámicos con rotaciones aleatorias sin que el objeto de juego pierda consistencia visual ni de colisiones.",
@@ -97,18 +98,18 @@ const translations = {
     proj_repo_link: "Ver repositorio →",
 
     proj3_title: "Jump&Dodge",
-    proj3_badge: "bootcamp · jugable",
+    proj3_badge: "prototipo · jugable",
     proj3_desc: "Prototipo de reflejos y control de salto: el jugador debe saltar y esquivar obstáculos que aparecen de forma continua, aumentando la dificultad conforme avanza la partida. Enfocado en pulir la sensación de salto (input responsivo, sin retardo perceptible).",
     proj3_link: "Jugar en itch.io →",
 
     proj4_title: "Transición de Colores",
-    proj4_badge: "bootcamp · jugable",
+    proj4_badge: "prototipo · jugable",
     proj4_desc: "Reto de lógica y percepción centrado en el manejo de estados y transiciones de color en tiempo real dentro de Unity, practicando control de eventos y feedback visual inmediato para el jugador.",
     proj4_link: "Jugar en itch.io →",
 
     proj5_media_label: "sin captura aún · disponible en itch.io",
     proj5_title: "Guerra de Balones",
-    proj5_badge: "bootcamp · jugable",
+    proj5_badge: "prototipo · jugable",
     proj5_desc: "Minijuego de acción construido en Unity como parte de los desafíos del bootcamp, enfocado en mecánicas de lanzamiento y colisión entre objetos.",
     proj5_link: "Jugar en itch.io →",
 
@@ -154,17 +155,18 @@ const translations = {
 
     edu0_date: "2026 – present",
     edu0_title: "Game Development Bootcamp (Unity)",
-    edu0_desc: "Intensive training in Unity Engine and C#: game mechanics, state management with GameManager-style patterns, real-time UI (UGUI), and version control with Git. Playable prototypes published progressively on itch.io.",
+    edu0_desc: "Unity and C#: game mechanics, the GameManager pattern, real-time UI, and Git.",
+    edu1_desc: "Direct continuation of the Software Development Technology program (same track).",
 
     exp1_date: "Jan 2025 – Jul 2025",
     exp1_title: "Technical & On-Site Support",
-    exp1_desc: "Managed and resolved incidents through a ticketing system, supported Microsoft 365 (SharePoint, Planner), and administered hosting platforms and corporate email.",
+    exp1_desc: "Resolved incidents through a ticketing system and supported Microsoft 365 (SharePoint, Planner).",
     exp2_date: "Aug 2024 – Jan 2025",
     exp2_title: "Level 1 Support Intern · Help Desk",
-    exp2_desc: "Maintained internal databases, provided on-site hardware and software support, and managed access permissions on the corporate domain.",
+    exp2_desc: "Maintained internal databases and provided on-site hardware and software support.",
     exp3_date: "Nov 2023 – Mar 2024",
     exp3_title: "Systems Assistant",
-    exp3_desc: "Migrated data between platforms and maintained operational databases for pricing and inventory control.",
+    exp3_desc: "Migrated data between platforms and maintained operational databases.",
 
     edu1_date: "2022 – present",
     edu1_title: "Software Engineering · 8th semester",
@@ -196,7 +198,7 @@ const translations = {
     tag_lang_en: "English · A2",
 
     projects_title: "Projects",
-    projects_hint: "A mix of backend and game development: the Unity prototypes are actively evolving as part of my bootcamp at Generation, published and playable on itch.io.",
+    projects_hint: "A mix of backend and game development. The Unity projects are <strong>prototypes currently in development</strong>, part of my bootcamp at Generation, playable on itch.io.",
     filter_all: "All",
     filter_web: "Backend / Web",
     filter_unity: "Unity",
@@ -210,7 +212,7 @@ const translations = {
     proj1_link: "View repository →",
 
     proj2_title: "Feed the Animals",
-    proj2_badge: "bootcamp · playable",
+    proj2_badge: "prototype · playable",
     proj2_desc: "3D Unity prototype (Generation bootcamp challenge) where the goal is to feed animals that spawn in side lanes with automatic rotations. Vertical and horizontal character movement, a lives/score system managed by a central <code>GameManager</code>, and world-space UI Sliders for health/energy bars.",
     proj2_challenge_label: "Challenge solved:",
     proj2_challenge_text: "syncing dynamic spawns with random rotations without the game object losing visual or collision consistency.",
@@ -218,18 +220,18 @@ const translations = {
     proj_repo_link: "View repository →",
 
     proj3_title: "Jump&Dodge",
-    proj3_badge: "bootcamp · playable",
+    proj3_badge: "prototype · playable",
     proj3_desc: "A reflex and jump-control prototype: the player must jump and dodge continuously spawning obstacles, with difficulty ramping up as the run progresses. Focused on polishing jump feel (responsive input, no perceptible lag).",
     proj3_link: "Play on itch.io →",
 
     proj4_title: "Color Transition",
-    proj4_badge: "bootcamp · playable",
+    proj4_badge: "prototype · playable",
     proj4_desc: "A logic and perception challenge centered on real-time color state and transition handling in Unity, practicing event control and immediate visual feedback for the player.",
     proj4_link: "Play on itch.io →",
 
     proj5_media_label: "no screenshot yet · playable on itch.io",
     proj5_title: "Guerra de Balones",
-    proj5_badge: "bootcamp · playable",
+    proj5_badge: "prototype · playable",
     proj5_desc: "An action minigame built in Unity as part of the bootcamp challenges, focused on throwing and collision mechanics between objects.",
     proj5_link: "Play on itch.io →",
 
