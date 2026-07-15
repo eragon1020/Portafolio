@@ -391,6 +391,17 @@ a:focus-visible, button:focus-visible{
 
 .panel__body--stack > * + *{ margin-top: 8px; }
 
+/* Corrige: .panel__body (definida más abajo como display:flex para "Acerca")
+   se aplicaba también a la Trayectoria, poniendo experiencia/educación/certificados
+   en fila en vez de en columna. Selector compuesto = mayor especificidad, gana siempre. */
+.panel__body.panel__body--stack{ display: block; }
+
+/* El label de cada sección queda "pegado" mientras se hace scroll por el
+   contenido, así el hueco de la izquierda deja de sentirse vacío. */
+@media (min-width: 860px){
+  .panel__label{ position: sticky; top: 110px; align-self: start; }
+}
+
 /* reveal on scroll */
 .reveal{ opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
 .reveal.is-visible{ opacity: 1; transform: translateY(0); }
@@ -505,6 +516,19 @@ a:focus-visible, button:focus-visible{
 }
 .project-card:hover{ transform: translateY(-4px); border-color: var(--amber-dim); }
 
+/* proyecto principal a ancho completo, imagen al lado del contenido en vez de arriba */
+.project-card--featured{ grid-column: 1 / -1; }
+@media (min-width: 680px){
+  .project-card--featured{ flex-direction: row; }
+  .project-card--featured .project-card__media{
+    width: 38%;
+    height: auto;
+    border-bottom: none;
+    border-right: 1px solid var(--border-soft);
+  }
+  .project-card--featured .project-card__body{ flex: 1; justify-content: center; }
+}
+
 .project-card__media{
   height: 160px;
   background:
@@ -567,6 +591,15 @@ a:focus-visible, button:focus-visible{
 .badge--live{ color: var(--teal); background: rgba(95,168,160,.12); border: 1px solid rgba(95,168,160,.3); }
 .badge--todo{ color: var(--text-faint); background: transparent; border: 1px dashed var(--border); }
 .badge--bootcamp{ color: var(--amber); background: rgba(232,163,61,.12); border: 1px solid rgba(232,163,61,.3); }
+.badge--team{ color: var(--teal); background: rgba(95,168,160,.12); border: 1px solid rgba(95,168,160,.3); }
+
+.project-card__role{
+  font-size: 13px;
+  color: var(--text-dim);
+  border-left: 2px solid var(--amber);
+  padding: 4px 0 4px 12px;
+}
+.project-card__role strong{ color: var(--amber); font-weight: 600; }
 
 .project-card__challenge{ font-size: 13.5px; }
 .project-card__links a{

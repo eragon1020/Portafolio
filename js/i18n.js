@@ -113,6 +113,13 @@ const translations = {
     proj5_desc: "Minijuego de acción construido en Unity como parte de los desafíos del bootcamp, enfocado en mecánicas de lanzamiento y colisión entre objetos.",
     proj5_link: "Jugar en itch.io →",
 
+    proj6_title: "Fast Formula",
+    proj6_badge: "equipo · game jam",
+    proj6_desc: "Juego 2D creado en equipo (4 personas) para la game jam \"You Really Shouldn't Mix Those\". El jugador combina elementos arrastrando y soltando para preparar las mezclas químicas que le piden sus compañeros, contrarreloj y bajo presión antes de quedarse sin oportunidades.",
+    proj6_role_label: "Mi rol:",
+    proj6_role_text: "colaborador en la integración del backend con el frontend, conectando la lógica del juego con la interfaz para que las mezclas y el estado de la partida se reflejaran correctamente.",
+    proj6_link: "Jugar en itch.io →",
+
     contact_title: "Contacto",
     contact_pitch: "¿Un rol de Desarrollador Junior abierto? Escríbeme, con gusto conversamos.",
     contact_label_email: "correo",
@@ -234,6 +241,13 @@ const translations = {
     proj5_badge: "prototype · playable",
     proj5_desc: "An action minigame built in Unity as part of the bootcamp challenges, focused on throwing and collision mechanics between objects.",
     proj5_link: "Play on itch.io →",
+
+    proj6_title: "Fast Formula",
+    proj6_badge: "team · game jam",
+    proj6_desc: "A 2D game built with a 4-person team for the \"You Really Shouldn't Mix Those\" game jam. The player combines elements via drag-and-drop to prepare the chemical mixtures requested by teammates, against the clock and under pressure before running out of chances.",
+    proj6_role_label: "My role:",
+    proj6_role_text: "collaborator on backend-frontend integration, connecting the game logic to the interface so mixtures and match state were reflected correctly.",
+    proj6_link: "Play on itch.io →",
 
     contact_title: "Contact",
     contact_pitch: "Have a Junior Developer role open? Reach out, I'd love to talk.",
