@@ -107,7 +107,12 @@
           <button type="button" class="filter-btn" data-filter="unity" data-i18n="filter_unity">Unity</button>
         </div>
 
-        <div class="project-grid">
+        <div class="project-carousel">
+          <button type="button" class="carousel-arrow carousel-arrow--prev" id="projPrev" aria-label="Proyecto anterior">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <div class="project-grid" id="projectGrid">
 
           <article class="project-card project-card--featured reveal-child" data-tilt data-category="web">
             <div class="project-card__media">
@@ -280,6 +285,15 @@
             </div>
           </article>
 
+          </div>
+
+          <button type="button" class="carousel-arrow carousel-arrow--next" id="projNext" aria-label="Siguiente proyecto">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+        <div class="carousel-progress" aria-hidden="true">
+          <span class="carousel-progress__bar" id="projProgressBar"></span>
         </div>
       </div>
     </div>

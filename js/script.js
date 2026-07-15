@@ -341,6 +341,87 @@ function initProjectFilter() {
 }
 
 // ==========================================================
+// Carrusel horizontal de proyectos (flechas + barra de progreso)
+// ==========================================================
+function initProjectCarousel() {
+  const track = document.getElementById('projectGrid');
+  const prevBtn = document.getElementById('projPrev');
+  const nextBtn = document.getElementById('projNext');
+  const progressBar = document.getElementById('projProgressBar');
+  if (!track || !prevBtn || !nextBtn) return;
+
+  // tarjeta visible más cercana al borde izquierdo del track
+  function getStep() {
+    const card = track.querySelector('.project-card:not([style*="display: none"])');
+    if (!card) return track.clientWidth * 0.8;
+    const style = getComputedStyle(card);
+    const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 24);
+    return card.getBoundingClientRect().width + gap;
+  }
+
+  function updateArrowsAndProgress() {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    prevBtn.disabled = track.scrollLeft <= 4;
+    nextBtn.disabled = track.scrollLeft >= maxScroll - 4;
+
+    if (progressBar) {
+      if (maxScroll <= 0) {
+        progressBar.style.width = '100%';
+      } else {
+        const visibleRatio = Math.min(track.clientWidth / track.scrollWidth, 1);
+        const scrolledRatio = track.scrollLeft / maxScroll;
+        const barWidth = Math.max(visibleRatio * 100, 10);
+        const travel = 100 - barWidth;
+        progressBar.style.width = barWidth + '%';
+        progressBar.style.transform = `translateX(${scrolledRatio * travel}%)`;
+      }
+    }
+  }
+
+  prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+  });
+  nextBtn.addEventListener('click', () => {
+    track.scrollBy({ left: getStep(), behavior: 'smooth' });
+  });
+
+  track.addEventListener('scroll', updateArrowsAndProgress, { passive: true });
+  window.addEventListener('resize', updateArrowsAndProgress);
+
+  // arrastrar con mouse (además del gesto táctil nativo)
+  let isDown = false, startX = 0, startScroll = 0, dragged = false;
+  track.addEventListener('mousedown', (e) => {
+    isDown = true; dragged = false;
+    startX = e.pageX; startScroll = track.scrollLeft;
+    track.style.scrollBehavior = 'auto';
+  });
+  window.addEventListener('mouseup', () => {
+    isDown = false;
+    track.style.scrollBehavior = 'smooth';
+  });
+  window.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    const delta = e.pageX - startX;
+    if (Math.abs(delta) > 4) dragged = true;
+    track.scrollLeft = startScroll - delta;
+  });
+  // evita que un arrastre dispare el click de un enlace dentro de la tarjeta
+  track.addEventListener('click', (e) => {
+    if (dragged) { e.preventDefault(); e.stopPropagation(); }
+  }, true);
+
+  // recalcular cuando el filtro de proyectos oculta/muestra tarjetas
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      track.scrollTo({ left: 0, behavior: 'smooth' });
+      setTimeout(updateArrowsAndProgress, 300);
+    });
+  });
+
+  updateArrowsAndProgress();
+}
+
+// ==========================================================
 // Música de fondo generativa (Web Audio API, sin archivos externos)
 // Pad ambiental suave estilo synth + secuencia arpegiada discreta.
 // Se sintetiza en el navegador: cero dependencias de red, cero temas
@@ -457,6 +538,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMagneticButtons();
   initTiltCards();
   initProjectFilter();
+  initProjectCarousel();
   initGenerativeAudio();
   // el primer runTypewriter/buildTicker/updateLastUpdated llega vía el evento
   // 'langchange' disparado por i18n.js al aplicar el idioma inicial
